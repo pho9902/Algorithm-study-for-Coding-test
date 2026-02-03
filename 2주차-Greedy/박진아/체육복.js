@@ -10,7 +10,7 @@ function solution(n, lost, reserve) {
       if(i > 1 && student[i-1] === 2){
         student[i-1]--;
         student[i]++;
-      } else if (i > 1 && student[i+1] === 2){
+      } else if (i < n && student[i+1] === 2){
         student[i+1]--;
         student[i]++;
       }
