@@ -7,8 +7,6 @@ function solution(name) {
     nameAsc.push(asc.codePointAt() - 65);
   }
 
-  console.log(nameAsc);
-
   for (let i of nameAsc) {
     if (i > 13) {
       answer += 26 - i;
@@ -24,8 +22,6 @@ function solution(name) {
   return answer;
 }
 
-console.log(solution("JAN"));
-
 /**
  * name을 쪼개서 배열에 넣음
  * (알파벳을 아스키코드로 변환한 값 - 65) 한 값을 배열에 넣음
@@ -34,7 +30,8 @@ console.log(solution("JAN"));
 1. name길이만큼 반복
 2. 차이를 answer에 더할건데
 2-1. 근데 차이가 13이상이면 (26 - 차이) 만큼 answer에 더해
-4. 다음 알파벳 => answer++;
+3. 다음 알파벳 => answer++;
+4. 지금 알파벳부터 마지막 알파벳까지 모두 차이가 0이면 역순으로 이동
 5. answer 리턴
 
 
